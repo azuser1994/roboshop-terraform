@@ -19,6 +19,7 @@ resource "azurerm_network_interface" "frontend" {
     name                          = "frontend-nic"
     subnet_id                     = "/subscriptions/344a5bc8-8e2d-4945-810b-881e275ec270/resourceGroups/project-setup-1/providers/Microsoft.Network/virtualNetworks/Project-setup-network/subnets/default"
     private_ip_address_allocation = "Dynamic"
+    public_ip_address_id          = azurerm_public_ip.frontend.id
   }
 }
 
@@ -70,6 +71,7 @@ resource "azurerm_network_interface" "mongodb" {
     name                          = "mongodb-nic"
     subnet_id                     = "/subscriptions/344a5bc8-8e2d-4945-810b-881e275ec270/resourceGroups/project-setup-1/providers/Microsoft.Network/virtualNetworks/Project-setup-network/subnets/default"
     private_ip_address_allocation = "Dynamic"
+    public_ip_address_id          = azurerm_public_ip.mongodb.id
   }
 }
 
@@ -121,6 +123,7 @@ resource "azurerm_network_interface" "catalogue" {
     name                          = "catalogue-nic"
     subnet_id                     = "/subscriptions/344a5bc8-8e2d-4945-810b-881e275ec270/resourceGroups/project-setup-1/providers/Microsoft.Network/virtualNetworks/Project-setup-network/subnets/default"
     private_ip_address_allocation = "Dynamic"
+    public_ip_address_id          = azurerm_public_ip.catalogue.id
   }
 }
 

@@ -9,7 +9,7 @@ variable "zone_name" {
 }
 
 variable "location"{
-  default = "Uk West"
+  default = "UK West"
 }
 
 variable "rg_name"{

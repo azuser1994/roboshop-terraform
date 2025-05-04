@@ -17,7 +17,7 @@ resource "azurerm_network_interface" "privateip" {
     #"/subscriptions/344a5bc8-8e2d-4945-810b-881e275ec270/resourceGroups/var.rg_name/providers/Microsoft.Network/virtualNetworks/Project-setup-network/subnets/default"
     private_ip_address_allocation = "Dynamic"
     public_ip_address_id          = azurerm_public_ip.publicip
-    .id
+    #.id
   }
 }
 
